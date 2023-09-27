@@ -1,0 +1,76 @@
+:host todo-task {
+    box-sizing: border-box;
+    display: flex;
+    border-bottom: 1px solid rgb(9, 29, 36);
+    width: 100%;
+    min-height: 10px;
+    color: white;
+    background: rgb(41, 67, 74);
+    padding: 10px;
+    height: 40px;
+    cursor: pointer;
+}
+
+:host todo-task.check  {
+    background: rgb(7, 25, 31);
+}
+
+:host todo-task:hover {
+    background: rgb(28, 46, 50);
+}
+
+:host todo-task:last-child {
+    border: 0;
+}
+
+:host todo-task div {
+    flex: 99;
+}
+
+:host todo-task.check div {
+    text-decoration: line-through;
+}
+
+:host todo-task .validate,
+:host todo-task .edit,
+:host todo-task .delete {
+    flex: 1;
+    box-sizing: border-box;
+    margin-right: 10px;
+    padding: 2px 6px;
+    border: 1px solid black;
+    margin-top: -3px;
+}
+
+:host todo-task .validate {
+    background: rgb(8, 130, 22);
+    border-color: rgb(17, 159, 27);
+}
+
+:host todo-task .edit {
+    background: rgb(185, 121, 2);
+    border-color: rgb(233, 147, 0);
+}
+
+:host todo-task .delete {
+    background: rgb(139, 0, 0);
+    border-color: rgb(196, 0, 0);
+}
+
+:host todo-task .delete,
+:host todo-task .validate {
+    display: none;
+}
+
+:host todo-task.check .delete {
+    display: block;
+}
+
+:host todo-task:has(input) .edit{
+    display: none;
+}
+
+:host todo-task:has(input) .validate,
+:host todo-task:has(input) .delete {
+    display: block;
+}

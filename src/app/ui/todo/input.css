@@ -1,0 +1,28 @@
+:host todo-input {
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+}
+
+:host todo-input input {
+    flex: 8;
+    border: 1px solid black;
+    border-radius: 0;
+    outline: none;
+}
+
+:host todo-input button {
+    border: 1px solid black;
+    cursor: pointer;
+    background: black;
+    color: white;
+    flex: 2;
+}
+
+:host todo-input button:hover {
+    background: white;
+    color: black;
+}
